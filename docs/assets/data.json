@@ -1,0 +1,78 @@
+{
+    "about": {
+        "name": "Andy Greenwell",
+        "images": ["assets/profile.jpg", "assets/profile_alt.jpg"],
+        "title": "Incoming Software Engineer @ Wayfair Inc.",
+        "address": "Boston College, Chestnut Hill, MA 02467",
+        "email": "greenwan@bc.edu",
+        "resume": "assets/resume.pdf",
+        "linkedin": "https://www.linkedin.com/in/andy-greenwell-09982b128/",
+        "github": "https://github.com/ajgreenwell",
+        "description": "Andy Greenwell is a passionate <strong>Software Engineer</strong> with a demonstrated mastery of fundamental programming concepts. In addition to being a student of life and a driven self-learner, Andy is a strong analytical thinker with a focus on the welfare of the people around him. He is currently earning a <strong>Bachelor of Science in Business Management</strong> from the <strong>Boston College Carroll School of Management</strong> with concentrations in <strong>Computer Science and Information Systems.</strong>",
+        "languages": {
+            "proficient": "Python, JavaScript, React.js, SQL, HTML, CSS",
+            "familiar": "Java, C, Node.js, Express.js, Flask, MongoDB"
+        }
+    },
+    "news": [
+        {
+            "description": "Accepted a full-time job offer as a Software Engineer at Wayfair Inc.",
+            "date": "September 14, 2019"
+        },
+        {
+            "description": "Began working as a Research Associate for <em>Introduction to Programming for Management.</em>",
+            "date": "September 5, 2019"
+        },
+        {
+            "description": "Began interning as a Full Stack Software Engineer at Wayfair Inc.",
+            "date": "June 6, 2019"
+        },
+        {
+            "description": "Began working as a Teaching Assistant for <em>Introduction to Programming for Management.</em>",
+            "date": "August 28, 2018"
+        },
+        {
+            "description": "Finished co-creating a new Python course for Boston College students, entitled <em>Introduction to Programming for Management.</em>",
+            "date": "August 14, 2018"
+        },
+        {
+            "description": "Began working as a Software Developer for the Information Systems Department at Boston College.",
+            "date": "March 21, 2018"
+        }
+    ],
+    "projects": [
+        {
+            "id": "connect-four",
+            "title": "Connect Four Game Server",
+            "date": "October – December, 2019",
+            "languages": "JavaScript (Node.js & Express.js), MongoDB",
+            "description": "You can think of this server as a middleman that sits between two client applications that are playing Connet Four against each other. Each client can register new games against other clients, make moves in their active games, and forfeit any active game by making different HTTP requests to the server. <span class='on-the-right'>On the right</span><span class='below'>Below</span> is a more detailed look at the various API endpoints available to clients.",
+            "detailedDescription": "While working as a Research Associate for the Boston College Python course entitled <em>Introduction to Programming for Management</em>, the professor decided to create a new final project wherein the students would build rudimentary applications that could play Connect Four against each other. In order to make this possible, he needed to build a backend server to facilitate the games. After helping him design the overall structure of the system and the API through which each student's application could interact with this game server, I decided to build my own version of the server for fun.</p><p>You can think of this server as a middleman that sits between the two client applications playing Connet Four agasint each other. Each client can register new games against other clients, make moves in their active games, and forfeit any active game by making different HTTP requests to the server. As the middleman, the server will validate any data within the request and maintain the integrity of each ongoing game, for example by preventing clients from making illegal moves. <span class='on-the-right'>On the right</span><span class='below'>Below</span> is a more detailed breakdown of these API endpoints.",
+            "tags": ["Personal Project", "Backend"],
+            "github": "https://github.com/ajgreenwell/Connect4",
+            "image": "assets/ConnectFour/ConnectFour.png"
+        },
+        {
+            "id": "heap-manager",
+            "title": "Heap Manager & Garbage Collector",
+            "date": "November, 2019",
+            "languages": "C",
+            "description": "This Heap Manager acts as a software development kit (SDK) for allocating, freeing, garbage collecting, and coelescing dynamic memory blocks. Written in C, it is based heavily upon C's own built-in explicit allocation functions, <em>malloc()</em> and <em>free()</em>, and it attempts to emulate their behavior efficiently.",
+            "detailedDescription": "This Heap Manager acts as a prototype for allocating, freeing, garbage collecting, and coelescing dynamic memory blocks. Written in C, it is based heavily upon C's own built-in functions <em>malloc()</em> and <em>free()</em>, and it attempts to emulate their behavior efficiently on a simulated heap.</p><p>In addition to providing its own explicit memory allocators and deallocators, this Heap Manager also includes a prototype for an automatic garbage collector. Whenever run, this garbage collector scans the call stack for any potential pointers to memory blocks on the heap and marks them. It then traverses the heap like a linked list, hopping from one header block to the next, checking each block along the way to see if it is marked. If not, the block is treated as garbage and is automatically deallocated.</p><p>The C language does not include an automatic garbage collector by default. Instead, it puts the onus on the developer to properly deallocate dynamic memory blocks. This garbage collector aims to solve that problem by offerring a way to automatically free up inaccessible memory blocks, thus freeing (pun intended) the developer from this resonsibility.",
+            "tags": ["Class Project", "Backend"],
+            "github": "https://github.com/ajgreenwell/HeapManager",
+            "image": "assets/HeapManager/HeapManager.png"
+        },
+        {
+            "id": "java-class-generator",
+            "title": "Java Class Generator",
+            "date": "January, 2019",
+            "languages": "Python",
+            "description": "This code generator is intended to reduce some of the overhead involved in creating Java classes that implement existing interfaces. By accepting Java interface files as input, the Java Class Generator parses these interfaces and automatically produces type-correct skeletons of their corresponding, implementing class files. <span class='on-the-right'>On the right</span><span class='below'>Below</span> is an example of a Java interface and an implementing class skeleton that was produced by the Java Class Generator.",
+            "detailedDescription": "After spending months focused on implementing Abstract Data Types in Java, I began to realize how cumbersome and error prone the creation and setup of class files can be. From copying over all the proper methods and import statements, to getting that class declaration compiler-ready, there are lots of opportunities for introducing small bugs to your program –– even before you've begun implementing an interface's methods.</p><p>In an effort to streamline this process, I developed this code generator. By passing an interface file to this application at the command line, a type-correct, compilable skeleton of that interface will be created and stored in the desired directory. That way all you have to worry about is the implementation, rather than wasting time on setup. <span class='on-the-right'>On the right</span><span class='below'>Below</span> is an example of a Java interface and an implementing class skeleton that was produced by the Java Class Generator.",
+            "tags": ["Personal Project", "Backend"],
+            "github": "https://github.com/ajgreenwell/JavaClassGenerator",
+            "image": "assets/JavaClassGenerator/JavaClassGenerator.png"
+        }
+    ]
+}

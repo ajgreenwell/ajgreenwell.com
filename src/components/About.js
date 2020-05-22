@@ -1,0 +1,31 @@
+import sample from 'lodash/sample';
+
+export default function renderAbout(about) {
+    const { 
+        _, images, title, address, email, resume,
+        linkedin, github, description, languages
+    } = about;
+
+    return `
+    <section id="about" class="row">
+        <div class="col-2 left-pane">
+            <img src="${sample(images)}">
+        </div>
+        <div class="col-7 about-info">
+            <p>
+                <strong>${title}</strong><br>
+                ${address}<br>
+                <a href="mailto:${email}">${email}</a> |
+                <a href="${resume}" target="_blank"><i class="far fa-file-alt"></i> Resume</a> |
+                <a href="${linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a> |
+                <a href="${github}" target="_blank"><i class="fab fa-github"></i></a>
+            </p>
+            <p>${description}</p>
+            <p>
+                <strong>Proficient in:</strong> ${languages.proficient}<br>
+                <strong>Familiar with:</strong> ${languages.familiar}
+            </p>
+        </div>
+    </section>
+    `;
+}
