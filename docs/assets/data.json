@@ -1,7 +1,7 @@
 {
     "about": {
         "name": "Andy Greenwell",
-        "images": ["assets/profile.jpg", "assets/profile_alt.jpg"],
+        "image": "assets/profile.jpg",
         "title": "Incoming Software Engineer @ Wayfair Inc.",
         "address": "Boston College, Chestnut Hill, MA 02467",
         "email": "greenwan@bc.edu",
