@@ -16,9 +16,9 @@ function NavLinks(projectName, navTitles) {
     const [ about, news, projects ] = navTitles;
     if (projectName === 'main') {
         return `
-        <a class="nav-item about animated pulse" href="index.html">${about}</a>
-        <a class="nav-item news animated pulse delay-1s" href="#news-location">${news}</a>
-        <a class="nav-item projects animated pulse delay-2s" href="#projects-location">${projects}</a>
+        <a class="nav-item about" href="index.html">${about}</a>
+        <a class="nav-item news" href="#news-location">${news}</a>
+        <a class="nav-item projects" href="#projects-location">${projects}</a>
         `;
     } else {
         return `

@@ -1,15 +1,14 @@
 import { isMainPage } from '../index.js';
 
-const projectTags = ['Personal Project', 'Class Project', 'Backend'];
 const allProjectsTag = 'All';
 
 export default function Projects(projects) {
     return `
-    <div id="projects-location"></div> <!-- For Navigation -->
+    <div id="projects-location"></div>
     <section id="projects">
         <h1>Projects</h1>
         <span id="projects-filter" class="row">
-            ${ProjectsFilter()}
+            ${ProjectsFilter(projects)}
         </span>
         <div id="projects-list">
             ${ProjectsList(projects)}
@@ -18,7 +17,13 @@ export default function Projects(projects) {
     `;
 }
 
-function ProjectsFilter() {
+function removeDuplicates(array) {
+    return Array.from(new Set(array));
+}
+
+function ProjectsFilter(projects) {
+    let projectTags = projects.reduce((acc, project) => acc.concat(project.tags), []);
+    projectTags = removeDuplicates(projectTags.map(tag => tag.text));
     projectTags.unshift(allProjectsTag);
     return projectTags.map(tag => {
         return `
@@ -53,8 +58,7 @@ export function ProjectDetails(project) {
                 </p>
                 <p>${isMainPage ? description : detailedDescription}</p>              
                 <p>Checkout the code on GitHub <a href="${github}" target="_blank">here</a>.</p>
-                <span class="tag personal">${tags[0]}</span>
-                <span class="tag backend">${tags[1]}</span>
+                ${ProjectTags(tags)}
             </div>
         </div>
         <div class="col-6 project-img">
@@ -66,6 +70,12 @@ export function ProjectDetails(project) {
 
 const isSingular = str => str.split(', ').length <= 1;
 
+function ProjectTags(tags) {
+    return tags.map(tag => 
+        `<span class="tag" style="background-color: ${tag.color}">${tag.text}</span>`
+    ).join('');
+    
+}
 
 export function handleProjectsFilter(projects) {
     document.querySelectorAll('#projects-filter input[name="filter"]').forEach(radioButton => {
@@ -74,7 +84,7 @@ export function handleProjectsFilter(projects) {
             let filteredProjects = projects.slice();
             if (filterTag != allProjectsTag.toLowerCase()) {
                 filteredProjects = projects.filter(project => {
-                    let lowercaseTags = project.tags.map(tag => tag.toLowerCase());
+                    let lowercaseTags = project.tags.map(tag => tag.text.toLowerCase());
                     return lowercaseTags.includes(filterTag.toLowerCase())
                 });
             }

@@ -1,6 +1,6 @@
 import NavBar from './NavBar.js';
 import About from './About.js';
-import News, { handleNewsFilter } from './News.js';
+import News, { handleNewsFilter, handleToggleNewsItems } from './News.js';
 import Projects, { handleProjectsFilter } from './Projects.js';
 import Footer from './Footer.js';
 
@@ -12,6 +12,7 @@ export default function MainPage(data) {
         ${Projects(data.projects)}
         ${Footer(data.about)}
     `;
+    handleToggleNewsItems(data.news);
     handleNewsFilter(data.news);
     handleProjectsFilter(data.projects);
 }

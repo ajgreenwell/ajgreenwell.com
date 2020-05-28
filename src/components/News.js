@@ -1,4 +1,5 @@
 const numNewsItemsToRender = 5;
+let shouldShowAllNewsItems = false;
 
 export default function News(news) {
     return `
@@ -7,8 +8,14 @@ export default function News(news) {
         <h1>News</h1>
         <input id="news-search" type="search" placeholder="Search News...">
         <div id="news-list">
-            ${NewsItems(news, numNewsItemsToRender)}
+            ${shouldShowAllNewsItems ?
+                NewsItems(news) :
+                NewsItems(news, numNewsItemsToRender)
+            }
         </div>
+        <button id="news-item-toggle">
+            ${shouldShowAllNewsItems ? 'See Less' : 'See All'}
+        </button>
     </section>
     `;
 }
@@ -33,12 +40,30 @@ function NewsItem(newsItem) {
     `;
 }
 
+function renderNewsItems(news, showAll) {
+    const newsItems = showAll ?
+            NewsItems(news, numNewsItemsToRender) :
+            NewsItems(news);
+    document.querySelector('#news-list').innerHTML = newsItems;
+}
+
+export function handleToggleNewsItems(news) {
+    const newsItemToggle = document.querySelector('#news-item-toggle');
+    newsItemToggle.addEventListener('click', event => {
+        renderNewsItems(news, shouldShowAllNewsItems);
+        event.target.innerHTML = shouldShowAllNewsItems ? 'See All' : 'See Less';
+        shouldShowAllNewsItems = !shouldShowAllNewsItems;
+    });
+}
+
 export function handleNewsFilter(news) {
     document.querySelector('#news-search').addEventListener('input', event => {
         let searchText = event.target.value;
         let filteredNews = news.filter(newsItem => {
             return newsItem.description.toLowerCase().includes(searchText.toLowerCase())
         });
-        document.querySelector('#news-list').innerHTML = NewsItems(filteredNews, numNewsItemsToRender);
+        renderNewsItems(filteredNews, !shouldShowAllNewsItems);
+        const newsItemToggle = document.querySelector('#news-item-toggle');
+        newsItemToggle.style.display = searchText ? 'none' : 'inline-block';
     });
 }

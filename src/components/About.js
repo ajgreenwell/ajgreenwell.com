@@ -11,7 +11,7 @@ export default function renderAbout(about) {
         </div>
         <div class="col-7 about-info">
             <p>
-                ${title}<br>
+                <strong>${title}</strong><br>
                 ${address}<br>
                 <a href="mailto:${email}">${email}</a> |
                 <a href="${resume}" target="_blank"><i class="far fa-file-alt"></i> Resume</a> |
