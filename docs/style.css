@@ -4,6 +4,7 @@
 
 :root {
     --border-radius: 5px;
+    --box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
     --nav-row-height: 70px;
     --container-width: 90%;
     --theme-color: #73131d;
@@ -265,9 +266,10 @@ img {
 }
 
 #news-search {
-    border-radius: var(--border-radius);
-    border-color: lightgrey;
-    padding: 4px 4px 4px 4px;
+    border-radius: 50px;
+    border-style: none;
+    box-shadow: var(--box-shadow);
+    padding: 8px 8px 8px 8px;
     width: 40%;
     min-width: 250px;
     border-width: 2px;
@@ -275,7 +277,7 @@ img {
 
 #news-search:focus {
     outline: none;
-    border-color: var(--theme-color);
+    box-shadow: 0 0 0 1px var(--theme-color), 0 2px 3px rgba(0,0,0,.2);
 }
 
 #news-item-toggle {
@@ -353,7 +355,7 @@ section {
     border-radius: var(--border-radius);
     background-color: white;
     margin-bottom: 30px;
-    box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+    box-shadow: var(--box-shadow);
 }
 
 section h1 {
