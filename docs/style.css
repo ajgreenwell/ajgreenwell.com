@@ -266,8 +266,10 @@ img {
 }
 
 #news-search {
+
     border-radius: 50px;
     border-style: none;
+    -webkit-appearance: none;
     box-shadow: var(--box-shadow);
     padding: 8px 8px 8px 8px;
     width: 40%;
