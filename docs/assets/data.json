@@ -78,7 +78,7 @@
             "detailedDescription": "An implementation of a restricted version of the C programming language. Written in OCaml, this project focused primarily on the code generation phases of the compiler, which are responsible for converting abstract syntax trees (a tree-like representation of the source code) into MIPS architecture assembly code. The vast majority of the compiler was written recursively, given the amount of tree traversals and recursive types involved in the compilation process. As a result, I had two major takeaways from this project: <ol><li>My ability to solve problems recursively and imagine how problems could be redefined recursively improved greatly. I also got a great deal of practice writing efficient, tail-recursive functions.</li><li>I learned a great deal about how programming languages operate under the hood, giving me a deeper insight into how certain features of a language (such as its type system) can lend themselves better to different problems.</li></ol>",
             "tags": [{"text": "Backend", "color": "lightgreen"}],
             "github": "https://github.com/ajgreenwell/Mini-C-Compiler",
-            "image": "assets/mini-C/Mini-C-Compiler.png"
+            "image": "assets/Mini-C/Mini-C-Compiler.png"
         },
         {
             "id": "connect-four",
