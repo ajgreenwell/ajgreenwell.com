@@ -6,7 +6,7 @@ export default function News(news) {
     <div id="news-location"></div>
     <section id="news">
         <h1>News</h1>
-        <input id="news-search" type="search" placeholder="Search News...">
+        <input id="news-search" type="text" placeholder="Search News...">
         <div id="news-list">
             ${shouldShowAllNewsItems ?
                 NewsItems(news) :
