@@ -5,7 +5,9 @@ import Footer from './Footer.js';
 export default function ProjectPage(projectName, data) {
     document.querySelector('.container').innerHTML = `
         ${NavBar(projectName, data.about.name, Object.keys(data))}
-        ${ProjectDetails(getProject(projectName, data.projects))}
+        <section id="project-page">
+            ${ProjectDetails(getProject(projectName, data.projects))}
+        </section>
         ${Footer(data.about)}
     `;
 }
