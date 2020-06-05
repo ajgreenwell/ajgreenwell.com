@@ -25,6 +25,7 @@ function ProjectsFilter(projects) {
     let projectTags = projects.reduce((acc, project) => acc.concat(project.tags), []);
     projectTags = removeDuplicates(projectTags.map(tag => tag.text));
     projectTags.unshift(allProjectsTag);
+    projectTags.sort();
     return projectTags.map(tag => {
         return `
         <label>

@@ -15,6 +15,16 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f5f8;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+strong {
+    font-weight: 500;
+}
+
+h1 {
+    font-weight: 500;
 }
 
 /* Device Specific Styles */
@@ -44,6 +54,14 @@ body {
 
     #projects-filter {
         flex-direction: column;
+    }
+
+    #project-page {
+        margin-top: 150px;
+    }
+
+    .left-pane, .about-info p:first-of-type {
+        text-align: center;
     }
 
     .project-img {
@@ -101,9 +119,17 @@ body {
         bottom: 100px;
     }
 
+    #about .left-pane {
+        margin-right: 15px;
+    }
+
     #projects-location {
         position: relative;
         bottom: 99px;
+    }
+
+    #project-page {
+        margin-top: 100px;
     }
 
     .text-align {
@@ -173,6 +199,7 @@ nav {
     background-color: var(--primary-color);
     border-bottom: 1px solid white;
     box-shadow: 0px 1px 3px grey;
+    z-index: 1;
 }
 
 nav.row {
@@ -182,6 +209,7 @@ nav.row {
 a {
     text-decoration: none;
     color: black;
+    transition: color .1s;
 }
 
 a:hover {
@@ -240,6 +268,7 @@ nav h1 {
 
 nav h1 a {
     font-size: 35px;
+    font-weight: bolder;
     border: none;
 }
 
@@ -250,10 +279,6 @@ nav h1 a:hover {
 
 #about, #project-details {
     margin-top: calc(var(--nav-row-height) + 30px);
-}
-
-#about .left-pane {
-    margin-right: 15px;
 }
 
 .about-info p:first-of-type {
@@ -283,22 +308,39 @@ img {
     margin-top: 20px;
 }
 
+#news-search-container {
+    position: relative;
+}
+
+#news-search-icon {
+    position: absolute;
+    color: lightgrey;
+    top: 9px;
+    left: 15px;
+}
+
 #news-search {
     border-radius: 50px;
     border-style: none;
     -webkit-appearance: none;
     box-shadow: var(--box-shadow);
     -webkit-box-shadow: var(--box-shadow);
-    padding: 8px 8px 8px 8px;
-    width: 40%;
-    min-width: 250px;
+    padding: 10px 10px 10px 40px;
+    width: 25%;
+    min-width: 150px;
     border-width: 2px;
+    transition: width .2s ease-out;
+}
+
+#news-search:focus + #news-search-icon {
+    color: var(--highlight-color);
 }
 
 #news-search:focus {
     outline: none;
     box-shadow: 0 0 0 1px var(--highlight-color), 0 2px 3px rgba(0,0,0,.2);
     -webkit-box-shadow: 0 0 0 1px var(--highlight-color), 0 2px 3px rgba(0,0,0,.2);
+    width: min(100%, 500px);
 }
 
 #news-item-toggle {
@@ -307,10 +349,11 @@ img {
     text-decoration: underline;
     padding: 0;
     margin-top: 20px;
+    transition: color .1s;
 }
 
 #news-item-toggle:hover {
-    color: var(--primary-color);
+    color: var(--highlight-color);
     cursor: pointer!important;
 }
 
@@ -384,10 +427,6 @@ section h1 {
 }
 
 /* Project Page Styles, except for anything above that uses #project-detials */
-
-#project-page {
-    margin-top: 100px;
-}
 
 #project-details {
     margin-bottom: 30px;

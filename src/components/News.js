@@ -6,7 +6,10 @@ export default function News(news) {
     <div id="news-location"></div>
     <section id="news">
         <h1>News</h1>
-        <input id="news-search" type="text" placeholder="Search News...">
+        <div id="news-search-container">
+            <input id="news-search" type="text" placeholder="Search News...">
+            <i id="news-search-icon" class="fas fa-search"></i>
+        </div>
         <div id="news-list">
             ${shouldShowAllNewsItems ?
                 NewsItems(news) :
@@ -58,9 +61,10 @@ export function handleToggleNewsItems(news) {
 
 export function handleNewsFilter(news) {
     document.querySelector('#news-search').addEventListener('input', event => {
-        let searchText = event.target.value;
+        let searchText = event.target.value.toLowerCase();
         let filteredNews = news.filter(newsItem => {
-            return newsItem.description.toLowerCase().includes(searchText.toLowerCase())
+            return newsItem.description.toLowerCase().includes(searchText) ||
+                   newsItem.date.toLowerCase().includes(searchText);
         });
         renderNewsItems(filteredNews, !shouldShowAllNewsItems);
         const newsItemToggle = document.querySelector('#news-item-toggle');
