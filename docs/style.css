@@ -6,12 +6,11 @@
     --border-radius: 5px;
     --box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
     --nav-height: 70px;
-    --section-margin: 50px;
     --container-width: 90%;
+    --section-margin: 50px;
     --primary-color: #03045e;
     --secondary-color: #023e8a;
     --highlight-color: #00b4d8;
-
 }
 
 html {
@@ -380,7 +379,7 @@ section h1 {
 
     :root {
        --nav-height: 120px;
-       --section-margin: 40px;
+       --section-margin: max(35px, min(50px, calc(10vw / 2 + 5px)));
     }
 
     [class*=col-] {
@@ -440,7 +439,7 @@ section h1 {
 
     :root {
        --nav-height: 24vw;
-       --section-margin: 8vw;
+       --section-margin: calc(10vw / 2 + 10px);
     }
 
     body {

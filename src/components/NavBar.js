@@ -3,7 +3,7 @@ export default function NavBar(projectName, name, navTitles) {
     return `
     <nav class="row">
         <div class="name flex-container col-6 vertical-center">
-            <h1><a href="#">${name}</a></h1>
+            <h1><a>${name}</a></h1>
         </div>
         <div class="nav-items flex-container col-6 perfect-center">
             ${NavLinks(projectName, navTitles)}
