@@ -3,7 +3,7 @@ export default function NavBar(projectName, name, navTitles) {
     return `
     <nav class="row">
         <div class="name flex-container col-6 vertical-center">
-            <h1><a href="index.html">${name}</a></h1>
+            <h1><a href="#">${name}</a></h1>
         </div>
         <div class="nav-items flex-container col-6 perfect-center">
             ${NavLinks(projectName, navTitles)}
@@ -16,13 +16,13 @@ function NavLinks(projectName, navTitles) {
     const [ about, news, projects ] = navTitles;
     if (projectName === 'main') {
         return `
-        <a class="nav-item about" href="index.html">${about}</a>
+        <a class="nav-item about" href="#">${about}</a>
         <a class="nav-item news" href="#news-location">${news}</a>
         <a class="nav-item projects" href="#projects-location">${projects}</a>
         `;
     } else {
         return `
-        <a class="nav-item" href="index.html">
+        <a class="nav-item" href="/">
             <i class="far fa-arrow-alt-circle-left"></i> back to home
         </a>            
         `;
