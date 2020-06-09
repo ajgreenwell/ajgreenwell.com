@@ -101,15 +101,16 @@ nav a:hover {
 }
 
 .nav-items {
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .nav-item {
     font-size: 20px;
+    margin-top: 5px;
 }
 
 .nav-item::after {
-    margin-top: 3px;
+    margin-bottom: 5px;
     content: "";
     position: relative;
     display: block;
@@ -239,6 +240,14 @@ img {
 #projects-filter label {
     margin-right: 4%;
     cursor: pointer;
+}
+
+#projects-filter label:hover {
+    color: var(--highlight-color);
+}
+
+#projects-filter label a {
+    color: inherit;
 }
 
 input[type="radio" i] {
