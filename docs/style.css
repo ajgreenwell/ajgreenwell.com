@@ -458,7 +458,7 @@ section h1 {
     }
 
     #projects .project {
-        margin-top: min(80px, max(40px, 10vw));
+        margin-top: min(80px, max(80px, 10vw));
     }
 
     .project-img {

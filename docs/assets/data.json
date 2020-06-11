@@ -26,13 +26,23 @@
                 "title": "React.js",
                 "logo": "<i class='fab fa-react'></i>",
                 "description": "Deployed thousands of lines of React code while working as a Software Engineer at Wayfair. Built numerous web apps using React, including <a href='https://spotifymanager.com' target='_blank'>spotifymanager.com</a>."
+            },
+            {
+                "title": "SQL",
+                "logo": "<i class='fas fa-database'></i>",
+                "description": "Wrote and refactored dozens of database queries while working as a Software Engineer at Wayfair. Experienced in designing and implementing relational database schemas."
             }
         ],
         "nontechnical": [
             {
                 "title": "Communication",
                 "logo": "<i class='far fa-comments'></i>",
-                "description": "Developed effective and articulate communication skills in both verbal and written contexts. Experienced in writing software design documents and communicating with a variety of cross-functional partners, including product managers, engineers, clients, analysts, and business stakeholders."
+                "description": "Developed effective and articulate communication skills in both verbal and written contexts. Experienced in communicating with a variety of cross-functional partners, including product managers, engineers, clients, analysts, and business stakeholders."
+            },
+            {
+                "title": "Leadership",
+                "logo": "<i class='fas fa-users'></i>",
+                "description": "Managed a team of 3 software engineers as the lead developer. Led weekly code reviews, conducted seminars on best practices, efficiently delegated responsibilities to achieve productivity targets, and created a 4-month roadmap of Agile development."
             }
         ]
     },
@@ -96,8 +106,8 @@
             "title": "Spotify Manager",
             "date": "April, 2020 – Present",
             "languages": "React.js",
-            "description": "A React.js web app that gives users more control over their Spotify music streaming experience. By logging in with their Spotify credentials, users can view their top songs across various timeframes and automatically generate playlists from them. This app features fully responsive UI design, making it both functional and beautiful on screens of all sizes. Spotify Manager is still in a prototype phase with plenty of room for expansion, but it is currently deployed and available at <a href='https://spotifymanager.com' target='_blank'>spotifymanager.com</a>.",
-            "detailedDescription": "In the Spring of 2020, I saw an opportunity to provide listeners with even more control over their music streaming experience. Although Spotify provides a great streaming platform, managing one's music library can be a tedious task at times. As a result, I built a web app that alleviates some of these frustrations by integrating with the Spotify API. This web app is still in a prototype phase with plenty of room for expansion, but it is currently deployed and available at <a href='https://spotifymanager.com' target='_blank'>spotifymanager.com</a>. <br><br> Throughout the development of this project, I focused on honing the following skills: <ol><li>Designing and constructing user interfaces that look beautiful and function seemlessly on devices of all sizes.</li><li>Interfacing with publicly available APIs by making HTTP requests, including 3rd party authentication services, and writing asynchronous javascript.</li></ol>",
+            "description": "A React.js web app that gives users more control over their Spotify music streaming experience. By logging in with their Spotify credentials, users can view their top songs across various timeframes and automatically generate playlists from them. This app features fully responsive UI design, making it both functional and beautiful on screens of all sizes. Spotify Manager is still in a prototype phase with plenty of room for expansion, but it is currently deployed and available for use at <a href='https://spotifymanager.com' target='_blank'>spotifymanager.com</a>.",
+            "detailedDescription": "In the Spring of 2020, I saw an opportunity to provide listeners with even more control over their music streaming experience. Although Spotify provides a great streaming platform, managing one's music library can be a tedious task at times. As a result, I built a web app that alleviates some of these frustrations by integrating with the Spotify API. This web app is still in a prototype phase with plenty of room for expansion, but it is currently deployed and available for use at <a href='https://spotifymanager.com' target='_blank'>spotifymanager.com</a>. <br><br> Throughout the development of this project, I focused on honing the following skills: <ol><li>Designing and constructing user interfaces that look beautiful and function seemlessly on devices of all sizes.</li><li>Interfacing with publicly available APIs by making HTTP requests, including 3rd party authentication services, and writing asynchronous javascript.</li></ol>",
             "tags": [{"text": "Frontend", "color": "lightcoral"}, {"text": "Web Development", "color": "lightskyblue"}],
             "github": "https://github.com/ajgreenwell/SpotifyManager",
             "image": "assets/SpotifyManager/SpotifyManager.png"
