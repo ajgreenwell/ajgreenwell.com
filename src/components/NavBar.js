@@ -13,10 +13,11 @@ export default function NavBar(projectName, name, navTitles) {
 }
 
 function NavLinks(projectName, navTitles) {
-    const [ about, news, projects ] = navTitles;
+    const [ about, skills, news, projects ] = navTitles;
     if (projectName === 'main') {
         return `
         <a class="nav-item about" href="#">${about}</a>
+        <a class="nav-item skills" href="#skills-location">${skills}</a>
         <a class="nav-item news" href="#news-location">${news}</a>
         <a class="nav-item projects" href="#projects-location">${projects}</a>
         `;

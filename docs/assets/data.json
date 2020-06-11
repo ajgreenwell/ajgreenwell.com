@@ -8,11 +8,33 @@
         "resume": "assets/resume.pdf",
         "linkedin": "https://www.linkedin.com/in/andy-greenwell-09982b128/",
         "github": "https://github.com/ajgreenwell",
-        "description": "Andy Greenwell is a passionate Software Engineer with a demonstrated mastery of fundamental programming concepts. In addition to being a student of life and a driven self-learner, Andy is a strong problem solver and analytical thinker with a proven ability to work effectively within techinical teams. In May of 2020, he graduated <i>Magna Cum Laude</i> from the Boston College Carroll School of Management with a Bachelor of Science in Business Management – along with two concentrations in Computer Science and Information Systems.",
-        "languages": {
-            "proficient": "Python, JavaScript, Django, React.js, HTML, CSS, SQL, Git",
-            "familiar": "Java, C, OCaml, Node.js, Express.js, Bash"
-        }
+        "description": "Andy Greenwell is a passionate Software Engineer with a demonstrated mastery of fundamental programming concepts. In addition to being a student of life and a driven self-learner, Andy is a strong problem solver and analytical thinker with a proven ability to work effectively within techinical teams. In May of 2020, he graduated <i>Magna Cum Laude</i> from the Boston College Carroll School of Management with a Bachelor of Science in Business Management – along with two concentrations in Computer Science and Information Systems."
+    },
+    "skills": {
+        "technical": [
+            {
+                "title": "Python",
+                "logo": "<i class='fab fa-python'></i>",
+                "description": "2+ years of experience writing Python in recreational and professional contexts, including web & API development with Django. Designed and created a Python programming course at Boston College."
+            },
+            {
+                "title": "JavaScript",
+                "logo": "<i class='fab fa-js-square'></i>",
+                "description": "2+ years of experience utilizing JavaScript in both frontend and backend environments – from the scripts used on this site to full-fledged REST APIs built with Node.js & Express.js."
+            },
+            {
+                "title": "React.js",
+                "logo": "<i class='fab fa-react'></i>",
+                "description": "Deployed thousands of lines of React code while working as a Software Engineer at Wayfair. Built numerous web apps using React, including <a href='https://spotifymanager.com' target='_blank'>spotifymanager.com</a>."
+            }
+        ],
+        "nontechnical": [
+            {
+                "title": "Communication",
+                "logo": "<i class='far fa-comments'></i>",
+                "description": "Developed effective and articulate communication skills in both verbal and written contexts. Experienced in writing software design documents and communicating with a variety of cross-functional partners, including product managers, engineers, clients, analysts, and business stakeholders."
+            }
+        ]
     },
     "news": [
         {

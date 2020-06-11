@@ -11,6 +11,8 @@
     --primary-color: #03045e;
     --secondary-color: #023e8a;
     --highlight-color: #00b4d8;
+    --nav-font-color: white;
+    --font-color: black;
 }
 
 html {
@@ -18,6 +20,7 @@ html {
 }
 
 body {
+    color: var(--font-color);
     font-family: Helvetica, sans-serif;
     background-color: #f4f5f8;
     line-height: 1.7;
@@ -28,6 +31,7 @@ body {
     position: relative;
     bottom: calc(var(--nav-height) + var(--section-margin));
 }
+
 
 h1, strong {
     font-weight: 700;
@@ -79,16 +83,21 @@ h1, strong {
 }
 
 nav {
-    color: white;
+    color: var(--nav-font-color);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: var(--nav-height);
     background-image: linear-gradient(to top left, var(--primary-color), var(--secondary-color));
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--nav-font-color);
     box-shadow: 0px 2px 3px grey;
     z-index: 1;
+}
+
+nav h1 {
+    text-transform: capitalize;
+    letter-spacing: 1px;
 }
 
 a {
@@ -102,12 +111,12 @@ a:hover {
 }
 
 nav a {
-    color: white;
+    color: var(--nav-font-color);
     padding: 5px;
 }
 
 nav a:hover {
-    color: white;
+    color: var(--nav-font-color);
 }
 
 .nav-items {
@@ -125,7 +134,7 @@ nav a:hover {
     position: relative;
     display: block;
     height: 1px;
-    background: white;
+    background: var(--nav-font-color);
     transform: scaleX(0);
     transition: transform 150ms ease-in-out;
 }
@@ -158,7 +167,7 @@ nav h1 a {
 }
 
 nav h1 a:hover {
-    color: white;
+    color: var(--nav-font-color);
     border: none;
 }
 
@@ -185,8 +194,48 @@ img {
     margin-top: calc(var(--nav-height) + var(--section-margin));
 }
 
-#about a, #projects .project-info a, #project-details a {
+#about a, #skills a, #projects .project-info a, #project-details a {
     text-decoration: underline;
+}
+
+.skills-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skill {
+    flex: 1 1 30%;
+    margin: 0 20px 20px 20px;
+    padding: 20px;
+    display: inline;
+    text-align: center;
+    line-height: 1;
+    max-width: 25%;
+    transition: transform .2s ease-out, box-shadow .2s, color .2s ease-out;
+}
+
+.skill:hover {
+    transform: scale(1.05, 1.05);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .1), -1px -1px 10px rgba(0, 0, 0, .1);
+}
+
+.skill-logo {
+    font-size: 50px;
+    color: var(--highlight-color);
+}
+
+.skill-title {
+    text-align: center;
+}
+
+.skill-description {
+    line-height: 1.7;
 }
 
 #news .news-item {
@@ -195,6 +244,7 @@ img {
 
 #news-search-container {
     position: relative;
+    margin-bottom: 25px;
 }
 
 #news-search-icon {
@@ -282,11 +332,14 @@ input[type="radio" i] {
     color: darkslategrey;
     border-radius: var(--border-radius);    
     margin-right: 10px;
-    padding: 5px;
+    padding: 8px;
+    text-transform: uppercase;
+    font-size: .75em;
+    box-shadow: var(--box-shadow);
 }
 
 #projects .project {
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 #projects .project-info, #project-details .project-info {
@@ -391,6 +444,11 @@ section h1 {
         padding-right: 12vw;
     }
 
+    .skill {
+        max-width: 400px;
+        min-width: 200px;
+    }
+
     #projects-filter {
         flex-direction: column;
     }
@@ -399,8 +457,12 @@ section h1 {
         text-align: center;
     }
 
+    #projects .project {
+        margin-top: min(80px, max(40px, 10vw));
+    }
+
     .project-img {
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .project-info {
@@ -439,7 +501,7 @@ section h1 {
 
     :root {
        --nav-height: 24vw;
-       --section-margin: calc(10vw / 2 + 10px);
+       --section-margin: max(30px, calc(10vw / 2 + 10px));
     }
 
     body {

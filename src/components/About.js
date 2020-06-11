@@ -19,10 +19,6 @@ export default function renderAbout(about) {
                 <a href="${github}" target="_blank"><i class="fab fa-github"></i></a>
             </p>
             <p>${description}</p>
-            <p>
-                <strong>Proficient in:</strong> ${languages.proficient}<br>
-                <strong>Familiar with:</strong> ${languages.familiar}
-            </p>
         </div>
     </section>
     `;
