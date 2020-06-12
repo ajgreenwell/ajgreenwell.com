@@ -6,8 +6,11 @@
     --border-radius: 5px;
     --box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
     --nav-height: 70px;
-    --container-width: 90%;
-    --section-margin: 50px;
+    --nav-margin: 50px;
+    --container-margin: 5vw;
+    --container-padding: 30px;
+    --section-margin: 100px;
+    --project-margin: 80px;
     --primary-color: #03045e;
     --secondary-color: #023e8a;
     --highlight-color: #00b4d8;
@@ -22,25 +25,20 @@ html {
 body {
     color: var(--font-color);
     font-family: Helvetica, sans-serif;
-    background-color: #f4f5f8;
+    background-color: #e3f7fc;
     line-height: 1.7;
     font-weight: 300;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 [id*="-location"] {
     position: relative;
-    bottom: calc(var(--nav-height) + var(--section-margin));
+    bottom: calc(var(--nav-height) - var(--section-margin) / 1.5);
 }
-
 
 h1, strong {
     font-weight: 700;
-}
-
-.container {
-    max-width: var(--container-width);
-    width: 100%;
-    margin: 0 auto;
 }
 
 .flex-container {
@@ -93,11 +91,14 @@ nav {
     border-bottom: 1px solid var(--nav-font-color);
     box-shadow: 0px 2px 3px grey;
     z-index: 1;
+    padding: 0 calc(var(--container-margin) + var(--container-padding));
 }
 
 nav h1 {
     text-transform: capitalize;
     letter-spacing: 1px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 a {
@@ -112,7 +113,6 @@ a:hover {
 
 nav a {
     color: var(--nav-font-color);
-    padding: 5px;
 }
 
 nav a:hover {
@@ -120,7 +120,7 @@ nav a:hover {
 }
 
 .nav-items {
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .nav-item {
@@ -151,13 +151,6 @@ nav a:hover {
 .nav-item:active::after {
     position: relative;
     bottom: 1px;
-}
-
-nav h1 {
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: calc(70px + 4.4%);
 }
 
 nav h1 a {
@@ -191,11 +184,32 @@ img {
 }
 
 #about, #project-page {
-    margin-top: calc(var(--nav-height) + var(--section-margin));
+    margin-top: calc(var(--nav-height) + var(--nav-margin));
+    padding: var(--container-padding);
+    border-radius: var(--border-radius);
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+
+#about {
+    margin-left: var(--container-margin);
+    margin-right: var(--container-margin);
+    margin-bottom: var(--section-margin);
 }
 
 #about a, #skills a, #projects .project-info a, #project-details a {
     text-decoration: underline;
+}
+
+#skills, #news, #projects {
+    padding-left: calc(var(--container-margin) + var(--container-padding));
+    padding-right: calc(var(--container-margin) + var(--container-padding));
+}
+
+#skills {
+    background-color: white;
+    width: 100vw;
+    padding-top: var(--section-margin);
 }
 
 .skills-header {
@@ -207,6 +221,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding-bottom: calc(var(--section-margin) - 56px);
 }
 
 .skill {
@@ -236,6 +251,11 @@ img {
 
 .skill-description {
     line-height: 1.7;
+}
+
+#news {
+    padding-top: var(--section-margin);
+    padding-bottom: var(--section-margin);
 }
 
 #news .news-item {
@@ -298,6 +318,15 @@ img {
     outline: none;
 }
 
+#projects {
+    background-color: white;
+    width: 100vw;
+    padding-top: var(--section-margin);
+    padding-bottom: calc(var(--container-margin) + var(--container-padding));
+    padding-left: calc(var(--container-margin) + var(--container-padding));
+    padding-right: calc(var(--container-margin) + var(--container-padding));
+}
+
 #projects-filter label:last-of-type {
     margin-right: 0;
 }
@@ -339,7 +368,7 @@ input[type="radio" i] {
 }
 
 #projects .project {
-    margin-top: 80px;
+    margin-top: var(--project-margin);
 }
 
 #projects .project-info, #project-details .project-info {
@@ -347,27 +376,25 @@ input[type="radio" i] {
 }
 
 footer {
-    border-top: 2px solid black;
-    padding: 0% 0% 2% 0%;
+    display: flex;
+    padding: 30px calc(var(--container-margin) + var(--container-padding)) 20px;
+    justify-content: space-between;
     align-items: center;
+}
+
+.bordered-footer {
+    border-top: 2px solid black;
+}
+
+.footer-icons {
+    display: flex;
+    width: 10vw;
+    justify-content: space-between;
 }
 
 footer a {
     margin-left: 4%;
     text-align: right;
-}
-
-footer .copyright {
-    position: relative;
-    top: 30px;
-}
-
-section {
-    padding: 30px;
-    border-radius: var(--border-radius);
-    background-color: white;
-    margin-bottom: var(--section-margin);
-    box-shadow: var(--box-shadow);
 }
 
 section h1 {
@@ -376,15 +403,17 @@ section h1 {
 
 /* Project Page Styles, except for anything above that uses #project-detials */
 
+#project-page {
+    margin-bottom: var(--nav-margin);
+}
+
 #project-details {
-    margin-bottom: var(--section-margin);
     margin-top: 0;
 }
 
 #project-details h1 {
     margin-top: 0;
 }
-
 
 /* Device Specific Styles */
 
@@ -401,11 +430,6 @@ section h1 {
     .col-10 { flex-basis: 83.33%; }
     .col-11 { flex-basis: 91.66%; }
     .col-12 { flex-basis: 100%; }
-
-    .nav-items {
-        padding-left: 7.5vw;
-        padding-right: 7.5vw;
-    }
 
     #about {
         flex-wrap: nowrap;
@@ -432,16 +456,11 @@ section h1 {
 
     :root {
        --nav-height: 120px;
-       --section-margin: max(35px, min(50px, calc(10vw / 2 + 5px)));
+       /* --section-margin: max(35px, min(50px, calc(10vw / 2 + 5px))); */
     }
 
     [class*=col-] {
         flex-basis: 100%;
-    }
-
-    .nav-items {
-        padding-left: 12vw;
-        padding-right: 12vw;
     }
 
     .skill {
@@ -495,13 +514,17 @@ section h1 {
         margin-top: 30px!important;
     }
 
+    .footer-icons {
+        width: 15vw;
+    }
+    
 }
 
 @media screen and (max-width: 485px) {
 
     :root {
        --nav-height: 24vw;
-       --section-margin: max(30px, calc(10vw / 2 + 10px));
+       --nav-margin: 10vw;
     }
 
     body {
@@ -518,5 +541,9 @@ section h1 {
 
     #news-search-icon {
         top: 11px;
+    }
+
+    .footer-icons {
+        width: 18vw;
     }
 }

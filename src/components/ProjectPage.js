@@ -8,7 +8,7 @@ export default function ProjectPage(projectName, data) {
         <section id="project-page">
             ${ProjectDetails(getProject(projectName, data.projects))}
         </section>
-        ${Footer(data.about)}
+        ${Footer(data.about, false)}
     `;
 }
 

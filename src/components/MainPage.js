@@ -12,7 +12,7 @@ export default function MainPage(data) {
         ${Skills(data.skills)}
         ${News(data.news)}
         ${Projects(data.projects)}
-        ${Footer(data.about)}
+        ${Footer(data.about, true)}
     `;
     handleToggleNewsItems(data.news);
     handleNewsFilter(data.news);
