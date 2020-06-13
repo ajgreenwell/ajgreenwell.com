@@ -10,8 +10,8 @@ export default function MainPage(data) {
         ${NavBar('main', data.about.name, Object.keys(data))}
         ${About(data.about)}
         ${Skills(data.skills)}
-        ${News(data.news)}
         ${Projects(data.projects)}
+        ${News(data.news)}
         ${Footer(data.about, true)}
     `;
     handleToggleNewsItems(data.news);

@@ -9,8 +9,8 @@ export default function renderAbout(about) {
         <div class="col-2 left-pane">
             <img src="${image}">
         </div>
-        <div class="col-7 about-info">
-            <p>
+        <div class="col-10 about-info">
+            <p id="about-title">
                 <strong>${title}</strong><br>
                 ${address}<br>
                 <a href="mailto:${email}">${email}</a> |

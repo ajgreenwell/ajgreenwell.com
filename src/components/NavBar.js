@@ -18,12 +18,12 @@ function NavLinks(projectName, navTitles) {
         return `
         <a class="nav-item about" href="#">${about}</a>
         <a class="nav-item skills" href="#skills-location">${skills}</a>
-        <a class="nav-item news" href="#news-location">${news}</a>
         <a class="nav-item projects" href="#projects-location">${projects}</a>
+        <a class="nav-item news" href="#news-location">${news}</a>
         `;
     } else {
         return `
-        <a class="nav-item" href="/">
+        <a class="nav-item back-to-home" href="/">
             <i class="far fa-arrow-alt-circle-left"></i> back to home
         </a>            
         `;

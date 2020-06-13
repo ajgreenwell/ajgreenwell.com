@@ -32,12 +32,15 @@ function NewsItem(newsItem) {
     const { description, date } = newsItem;
 
     return `
-    <div class="row news-item">
-        <div class="col-10">
-            ${description}
-        </div>
-        <div class= "col-2 news-date text-align">
-            <em>${date}</em>
+    <div class="news-item">
+        <i class="fas fa-angle-right news-icon"></i>
+        <div class="row news-text">
+            <div class="col-10">
+                ${description}
+            </div>
+            <div class= "col-2 news-date text-align">
+                <em>${date}</em>
+            </div>
         </div>
     </div>
     `;
@@ -55,6 +58,8 @@ export function handleToggleNewsItems(news) {
     newsItemToggle.addEventListener('click', event => {
         renderNewsItems(news, shouldShowAllNewsItems);
         event.target.innerHTML = shouldShowAllNewsItems ? 'See All' : 'See Less';
+        if (shouldShowAllNewsItems)
+            window.location.href = "/#news-location";
         shouldShowAllNewsItems = !shouldShowAllNewsItems;
     });
 }

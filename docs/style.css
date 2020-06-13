@@ -5,12 +5,15 @@
 :root {
     --border-radius: 5px;
     --box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+    --line-height: 2;
     --nav-height: 70px;
     --nav-margin: 50px;
     --container-margin: 5vw;
     --container-padding: 30px;
     --section-margin: 100px;
     --project-margin: 80px;
+    --news-margin: 35px;
+    --background-color: #caf0f854;
     --primary-color: #03045e;
     --secondary-color: #023e8a;
     --highlight-color: #00b4d8;
@@ -25,8 +28,8 @@ html {
 body {
     color: var(--font-color);
     font-family: Helvetica, sans-serif;
-    background-color: #e3f7fc;
-    line-height: 1.7;
+    background-color: var(--background-color);
+    line-height: var(--line-height);
     font-weight: 300;
     margin-left: 0;
     margin-right: 0;
@@ -128,6 +131,11 @@ nav a:hover {
     margin-top: 5px;
 }
 
+.nav-item.back-to-home {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .nav-item::after {
     margin-bottom: 5px;
     content: "";
@@ -178,13 +186,15 @@ img {
 }
 
 #about img {
-    width: min(300px, 65vw);
+    width: min(300px,60vw);
     height: 300px;
     object-fit: cover;
 }
 
 #about, #project-page {
     margin-top: calc(var(--nav-height) + var(--nav-margin));
+    margin-left: calc(var(--container-margin) + var(--container-padding));
+    margin-right: calc(var(--container-margin) + var(--container-padding));
     padding: var(--container-padding);
     border-radius: var(--border-radius);
     background-color: white;
@@ -192,13 +202,15 @@ img {
 }
 
 #about {
-    margin-left: var(--container-margin);
-    margin-right: var(--container-margin);
     margin-bottom: var(--section-margin);
 }
 
 #about a, #skills a, #projects .project-info a, #project-details a {
     text-decoration: underline;
+}
+
+#about-title {
+    line-height: 1.5;
 }
 
 #skills, #news, #projects {
@@ -250,16 +262,14 @@ img {
 }
 
 .skill-description {
-    line-height: 1.7;
+    line-height: var(--line-height);
+    margin: 0;
 }
 
 #news {
+    background-color: white;
     padding-top: var(--section-margin);
     padding-bottom: var(--section-margin);
-}
-
-#news .news-item {
-    margin-top: 20px;
 }
 
 #news-search-container {
@@ -299,12 +309,31 @@ img {
     width: min(100%, 500px);
 }
 
+.news-item {
+    display: flex;
+    margin-top: var(--news-margin);
+}
+
+.news-icon {
+    color: var(--highlight-color);
+    font-size: 1.3em;
+    position: relative;
+    top: 5px;
+}
+
+.news-text {
+    margin-left: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 #news-item-toggle {
     border: none;
     background-color: transparent;
     text-decoration: underline;
     padding: 0;
-    margin-top: 20px;
+    margin-top: var(--news-margin);
     transition: color .1s;
     font-size: inherit;
 }
@@ -319,10 +348,9 @@ img {
 }
 
 #projects {
-    background-color: white;
     width: 100vw;
     padding-top: var(--section-margin);
-    padding-bottom: calc(var(--container-margin) + var(--container-padding));
+    padding-bottom: var(--section-margin);
     padding-left: calc(var(--container-margin) + var(--container-padding));
     padding-right: calc(var(--container-margin) + var(--container-padding));
 }
@@ -369,6 +397,10 @@ input[type="radio" i] {
 
 #projects .project {
     margin-top: var(--project-margin);
+    padding: var(--container-padding);
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow)
 }
 
 #projects .project-info, #project-details .project-info {
@@ -377,7 +409,8 @@ input[type="radio" i] {
 
 footer {
     display: flex;
-    padding: 30px calc(var(--container-margin) + var(--container-padding)) 20px;
+    margin: 0 var(--container-margin);
+    padding: 30px var(--container-padding) 20px;
     justify-content: space-between;
     align-items: center;
 }
@@ -463,6 +496,11 @@ section h1 {
         flex-basis: 100%;
     }
 
+    nav h1 {
+        line-height: 35px;
+        vertical-align: top;
+    }
+
     .skill {
         max-width: 400px;
         min-width: 200px;
@@ -539,8 +577,17 @@ section h1 {
         font-size: 4vw;
     }
 
+    #about {
+        margin-left: calc(var(--container-margin) + 5vw);
+        margin-right: calc(var(--container-margin) + 5vw);
+    }
+
     #news-search-icon {
         top: 11px;
+    }
+
+    .news-icon {
+        top: 1vw;
     }
 
     .footer-icons {
