@@ -253,6 +253,8 @@ img {
     padding: 20px;
     display: inline;
     text-align: center;
+    border-style: none;
+    border-radius: var(--border-radius);
     line-height: 1;
     max-width: 25%;
     transition: transform .2s ease-out, box-shadow .2s, color .2s ease-out;
@@ -335,6 +337,16 @@ input[type="radio" i] {
 
 #projects .project-info, #project-details .project-info {
     padding-right: 60px;
+}
+
+.project-info h1 {
+    margin: 0 0 25px;
+    line-height: 2.2rem;
+}
+
+.project-info h3 {
+    line-height: 1.17em;
+    margin: 0 0 20px;
 }
 
 #news {

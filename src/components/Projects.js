@@ -49,9 +49,14 @@ export function ProjectDetails(project) {
     return `
     <div ${isMainPage ?  'class="project row"' : 'id="project-details" class="row"'}>
         <div class="col-6 project-info">
-            <div>
-                ${isMainPage ? `<a href="/?project=${id}"><strong>${title}</strong></a>` : `<h1>${title}</h1>`}
-            </div>
+            ${isMainPage ?
+                `<h3>
+                    <a href="/?project=${id}">
+                        <strong>${title}</strong>
+                    </a>
+                </h3>` :
+                `<h1>${title}</h1>`
+            }
             <div>
                 <p>
                     <strong>Date:</strong> ${date}<br>
