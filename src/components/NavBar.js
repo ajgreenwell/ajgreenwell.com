@@ -13,7 +13,7 @@ export default function NavBar(projectName, name, navTitles) {
 }
 
 function NavLinks(projectName, navTitles) {
-    const [ about, skills, news, projects ] = navTitles;
+    const [ about, skills, projects, news ] = navTitles;
     if (projectName === 'main') {
         return `
         <a class="nav-item about" href="#">${about}</a>

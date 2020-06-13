@@ -2,7 +2,7 @@
     "about": {
         "name": "Andy Greenwell",
         "image": "assets/profile.jpg",
-        "title": "Incoming Software Engineer @ Wayfair Inc.",
+        "title": "Incoming Software Engineer @ Wayfair",
         "address": "Boston College, Chestnut Hill, MA 02467",
         "email": "ajgreenwell20@gmail.com",
         "resume": "assets/resume.pdf",
@@ -46,60 +46,6 @@
             }
         ]
     },
-    "news": [
-        {
-            "description": "Graduated <i>Magna Cum Laude</i> from the Boston College Carroll School of Management.",
-            "date": "May 18, 2020"
-        },
-        {
-            "description": "Finished working as a Software Engineer & Team Lead for the Boston College Computer Science Department.",
-            "date": "May 14, 2020"
-        },
-        {
-            "description": "Began developing a large-scale, full stack web app as a Software Engineer & Team Lead for the Boston College Computer Science Department.",
-            "date": "January 21, 2020"
-        },
-        {
-            "description": "Accepted a full-time job offer as a Software Engineer at Wayfair Inc.",
-            "date": "September 14, 2019"
-        },
-        {
-            "description": "Began working as a Research Associate for <em>Introduction to Programming for Management.</em>",
-            "date": "September 5, 2019"
-        },
-        {
-            "description": "Completed a Software Engineering internship at Wayfair Inc.",
-            "date": "June 6, 2019"
-        },
-        {
-            "description": "Began interning as a Full Stack Software Engineer at Wayfair Inc.",
-            "date": "June 6, 2019"
-        },
-        {
-            "description": "Finished studying abroad in Parma, Italy.",
-            "date": "May 15, 2019"
-        },
-        {
-            "description": "Started studying abroad in Parma, Italy.",
-            "date": "January 11, 2019"
-        },
-        {
-            "description": "Finished working as a Teaching Assistant for <em>Introduction to Programming for Management.</em>",
-            "date": "December 18, 2018"
-        },
-        {
-            "description": "Began working as a Teaching Assistant for <em>Introduction to Programming for Management.</em>",
-            "date": "August 28, 2018"
-        },
-        {
-            "description": "Finished co-creating a new Python course for Boston College students, entitled <em>Introduction to Programming for Management.</em>",
-            "date": "August 14, 2018"
-        },
-        {
-            "description": "Began working as a Software Developer for the Information Systems Department at Boston College.",
-            "date": "March 21, 2018"
-        }
-    ],
     "projects": [
         {
             "id": "spotify-manager",
@@ -155,6 +101,60 @@
             "tags": [{"text": "Backend", "color": "lightgreen"}],
             "github": "https://github.com/ajgreenwell/JavaClassGenerator",
             "image": "assets/JavaClassGenerator/JavaClassGenerator.png"
+        }
+    ],
+    "news": [
+        {
+            "description": "Graduated <i>Magna Cum Laude</i> from the Boston College Carroll School of Management.",
+            "date": "May 18, 2020"
+        },
+        {
+            "description": "Finished working as a Software Engineer & Team Lead for the Boston College Computer Science Department.",
+            "date": "May 14, 2020"
+        },
+        {
+            "description": "Began developing a large-scale, full stack web app as a Software Engineer & Team Lead for the Boston College Computer Science Department.",
+            "date": "January 21, 2020"
+        },
+        {
+            "description": "Accepted a full-time job offer as a Software Engineer at Wayfair Inc.",
+            "date": "September 14, 2019"
+        },
+        {
+            "description": "Began working as a Research Associate for <em>Introduction to Programming for Management.</em>",
+            "date": "September 5, 2019"
+        },
+        {
+            "description": "Completed a Software Engineering internship at Wayfair Inc.",
+            "date": "August 9, 2019"
+        },
+        {
+            "description": "Began interning as a Full Stack Software Engineer at Wayfair Inc.",
+            "date": "June 6, 2019"
+        },
+        {
+            "description": "Finished studying abroad in Parma, Italy.",
+            "date": "May 15, 2019"
+        },
+        {
+            "description": "Started studying abroad in Parma, Italy.",
+            "date": "January 11, 2019"
+        },
+        {
+            "description": "Finished working as a Teaching Assistant for <em>Introduction to Programming for Management.</em>",
+            "date": "December 18, 2018"
+        },
+        {
+            "description": "Began working as a Teaching Assistant for <em>Introduction to Programming for Management.</em>",
+            "date": "August 28, 2018"
+        },
+        {
+            "description": "Finished co-creating a new Python course for Boston College students, entitled <em>Introduction to Programming for Management.</em>",
+            "date": "August 14, 2018"
+        },
+        {
+            "description": "Began working as a Software Developer for the Information Systems Department at Boston College.",
+            "date": "March 21, 2018"
         }
     ]
 }
