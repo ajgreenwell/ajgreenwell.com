@@ -14,35 +14,59 @@
         "technical": [
             {
                 "title": "Python",
-                "logo": "<i class='fab fa-python'></i>",
+                "icons": ["<i class='fab fa-python'></i>"],
+                "animationClass": "icon-spin",
                 "description": "2+ years of experience writing Python in recreational and professional contexts, including web & API development with Django. Designed and created a Python programming course at Boston College."
             },
             {
                 "title": "JavaScript",
-                "logo": "<i class='fab fa-js-square'></i>",
+                "icons": ["<i class='fab fa-js-square'></i>"],
+                "animationClass": "icon-zoom",
                 "description": "2+ years of experience utilizing JavaScript in both frontend and backend environments – from the scripts used on this site to full-fledged REST APIs built with Node.js & Express.js."
             },
             {
                 "title": "React.js",
-                "logo": "<i class='fab fa-react'></i>",
+                "icons": ["<i class='fab fa-react'></i>"],
+                "animationClass": "icon-spin",
                 "description": "Deployed thousands of lines of React code while working as a Software Engineer at Wayfair. Built numerous web apps using React, including <a href='https://spotifymanager.com' target='_blank'>spotifymanager.com</a>."
             },
             {
+                "title": "HTML & CSS",
+                "icons": ["<i class='fab fa-html5'></i>", "<i class='fab fa-css3-alt'></i>"],
+                "animationClass": "icon-flip",
+                "description": "Skilled in developing beautifully designed and fully responsive web pages using HTML & CSS. Adept at building dynamic layouts using CSS tools like flexbox, grid, transitions and animations."
+            },
+            {
                 "title": "SQL",
-                "logo": "<i class='fas fa-database'></i>",
+                "icons": ["<i class='fas fa-database'></i>"],
+                "animationClass": "icon-zoom",
                 "description": "Wrote and refactored dozens of database queries while working as a Software Engineer at Wayfair. Experienced in designing and implementing relational database schemas."
+            },
+            {
+                "title": "Git",
+                "icons": ["<i class='fab fa-github'></i>"],
+                "animationClass": "icon-flip",
+                "description": "Proficient in utilizing GitHub to collaborate on professional and academic projects. Fluent in common Git workflows that include the usage of branches, pull requests, and code reviews."
             }
         ],
         "nontechnical": [
             {
                 "title": "Communication",
-                "logo": "<i class='far fa-comments'></i>",
+                "icons": ["<i class='far fa-comments'></i>"],
+                "animationClass": "icon-flip",
                 "description": "Developed effective and articulate communication skills in both verbal and written contexts. Experienced in communicating with a variety of cross-functional partners, including product managers, engineers, clients, analysts, and business stakeholders."
             },
             {
                 "title": "Leadership",
-                "logo": "<i class='fas fa-users'></i>",
+                "icons": ["<i class='fas fa-users'></i>"],
+                "animationClass": "icon-zoom",
                 "description": "Managed a team of 3 software engineers as the lead developer. Led weekly code reviews, conducted seminars on best practices, efficiently delegated responsibilities to achieve productivity targets, and created a 4-month roadmap of Agile development."
+            }, 
+            {
+                "title": "Critical Thinking",
+                "icons": ["<i class='fas fa-brain'></i>"],
+                "animationClass": "icon-squish",
+                "description": "Skilled at breaking down larger tasks into smaller, executable steps. Proficient at solving problems efficiently within a set of business constraints while balancing product quality with deliverance speed."
             }
         ]
     },

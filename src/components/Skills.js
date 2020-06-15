@@ -14,12 +14,18 @@ export default function Skills({technical, nontechnical}) {
     `;
 }
 
-function Skill({title, logo, description}) {
+function Skill({title, icons, animationClass, description}) {
     return `
     <div class="skill">
-        <span class="skill-logo">${logo}</span>
+        <span class="skill-icon ${animationClass}">${Icons(icons)}</span>
         <h4 class="skill-title">${title}</h4>
         <p class="skill-description">${description}</p>
     </div>
     `;
+}
+
+function Icons(icons) {
+  return icons.reduce((acc, icon) =>
+    `${acc}<i class="fas fa-plus skill-icon-concatenator"></i>${icon}`
+  );
 }

@@ -28,7 +28,7 @@ html {
 
 body {
     color: var(--font-color);
-    font-family: Helvetica;
+    font-family: 'Helvetica';
     background-color: var(--background-color);
     line-height: var(--line-height);
     font-weight: 300;
@@ -47,6 +47,7 @@ h1, strong {
 
 h1 {
     font-size: 2.2em;
+    margin-bottom: 20px;
 }
 
 .flex-container {
@@ -265,9 +266,54 @@ img {
     box-shadow: 1px 1px 10px rgba(0, 0, 0, .1), -1px -1px 10px rgba(0, 0, 0, .1);
 }
 
-.skill-logo {
+@keyframes icon-spin {
+    20%, 100% { transform: rotate(540deg) }
+}
+
+@keyframes icon-flip {
+    10%, 50%  { transform: scaleX(-1) }
+    60%, 100% { transform: scaleX(1) }
+}
+
+@keyframes icon-zoom {
+    10%       { transform: scale(1.15, 1.15) }
+    20%, 100% { transform: scale(1, 1) }
+}
+
+@keyframes icon-squish {
+    10%       { transform: scale(.85, 1.15) }
+    20%, 100% { transform: scale(1, 1) }
+}
+
+.icon-spin {
+    animation: icon-spin 5s ease-in-out 5s infinite forwards;
+}
+
+.icon-flip {
+    animation: icon-flip 10s ease-in-out 5s infinite forwards;
+}
+
+.icon-zoom {
+    animation: icon-zoom 5s ease-in-out 5s infinite forwards;
+}
+
+.icon-squish {
+    animation: icon-squish 5s ease-in-out 5s infinite forwards;
+}
+
+.skill-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 50px;
     color: var(--highlight-color);
+}
+
+.skill-icon-concatenator {
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--font-color);
+    margin: 0 10px;
 }
 
 .skill-title {
@@ -341,11 +387,11 @@ input[type="radio" i] {
 
 .project-info h1 {
     margin: 0 0 25px;
-    line-height: 2.2rem;
+    line-height: 1.4em;
 }
 
 .project-info h3 {
-    line-height: 1.17em;
+    line-height: 1.4em;
     margin: 0 0 20px;
 }
 
