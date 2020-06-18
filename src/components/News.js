@@ -33,7 +33,7 @@ function NewsItem(newsItem) {
 
     return `
     <div class="news-item">
-        <i class="fas fa-angle-right news-icon"></i>
+    <i class="fab fa-ethereum news-icon"></i>
         <div class="row news-text">
             <div class="col-10">
                 ${description}

@@ -63,6 +63,12 @@
                 "description": "Managed a team of 3 software engineers as the lead developer. Led weekly code reviews, conducted seminars on best practices, efficiently delegated responsibilities to achieve productivity targets, and created a 4-month roadmap of Agile development."
             }, 
             {
+                "title": "Collaboration",
+                "icons": ["<i class='fas fa-people-carry'></i>"],
+                "animationClass": "icon-flip",
+                "description": "Experienced in building software as part of a larger team, especially when working in iterative cycles according to Agile principles. Collaborates effectively with other developers in order to increase productivity, tackle larger problems, and onboard new engineers."
+            },
+            {
                 "title": "Critical Thinking",
                 "icons": ["<i class='fas fa-brain'></i>"],
                 "animationClass": "icon-squish",
