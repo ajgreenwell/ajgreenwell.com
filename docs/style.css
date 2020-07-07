@@ -473,6 +473,7 @@ input[type="radio" i] {
 }
 
 #news-item-toggle {
+    color: inherit;
     border: none;
     background-color: transparent;
     text-decoration: underline;
